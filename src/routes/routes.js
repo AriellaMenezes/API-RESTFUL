@@ -1,10 +1,16 @@
 const router = require('express').Router()
 
-router.get('/clientes', (req, res) => {
+const ProdutosCotroller = require('../controle/produtos')
 
-    res.send({
-        ok: 123
-    })
-})
+// VERBOS HTTP (4 TIPOS)
+// GET - obter dados 
+// POST - enviar/receber dados
+// PUT - atualizar dados 
+// DELETE - deletar/remover dados
 
+
+router.get('/produtos', ProdutosCotroller.get)
+//router.post('/produtos', ProdutosCotroller.post)
+//router.put('/produtos/:id', ProdutosCotroller.put)
+//router.delete('/produtos/:id', ProdutosCotroller.delete)
 module.exports = router
