@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema({
     nome: String,
-    marca: Number,
-    preco: String,
+    marca: String,
+    preco: Number,
 
 })
 

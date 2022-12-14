@@ -1,7 +1,12 @@
-const ProdutosModel = require('../modelo/produtos')
+ const ProdutosModel = require('../modelo/produtos')
 
 async function get(req, res) {
-    const produtos = await ProdutosModel.find()
+    const { id } = req.params
+
+    const obj = id ? { _id: id } : null
+
+   
+    const produtos = await ProdutosModel.find(obj)
 
     res.send(produtos)
 
@@ -9,4 +14,4 @@ async function get(req, res) {
 
 module.exports = {
     get,
-}
+}  
