@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
 function connect() {
-    //mongoose.set('useNewUrlParser', true) --Na nova atulização nao precisa usar
-   // mongoose.set('useUnifiedTopology', true)
+    mongoose.set("strictQuery", true); 
+   //mongoose.set('useUnifiedTopology', true)//--Na nova atulização nao precisa usar
 
     mongoose.connect('mongodb://mongodb://localhost:27017/api-restful?readPreference=primary&ssl=false&directConnection=true')
 
