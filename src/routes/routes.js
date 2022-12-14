@@ -10,7 +10,7 @@ const ProdutosCotroller = require('../controle/produtos')
 
 
 router.get('/produtos/:id?', ProdutosCotroller.get)
-//router.post('/produtos', ProdutosCotroller.post)
+router.post('/produtos', ProdutosCotroller.post)
 //router.put('/produtos/:id', ProdutosCotroller.put)
 //router.delete('/produtos/:id', ProdutosCotroller.delete)
 module.exports = router
