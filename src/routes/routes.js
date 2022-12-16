@@ -12,5 +12,5 @@ const ProdutosCotroller = require('../controle/produtos')
 router.get('/produtos/:id?', ProdutosCotroller.get)
 router.post('/produtos', ProdutosCotroller.post)
 router.put('/produtos/:id', ProdutosCotroller.put)
-//router.delete('/produtos/:id', ProdutosCotroller.delete)
+router.delete('/produtos/:id', ProdutosCotroller.remove)
 module.exports = router
